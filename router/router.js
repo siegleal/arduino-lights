@@ -4,7 +4,7 @@ var lights = require('./lights');
 var setColor = require('./setColor');
 
 
-router.get('/lights', lights);
+router.get('/', lights);
 router.post('/setcolor', setColor);
 
 module.exports = router;

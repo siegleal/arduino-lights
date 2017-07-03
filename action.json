@@ -1,0 +1,81 @@
+{
+  "actionPackage": {
+    "actions": [
+      {
+        "name": "MAIN",
+        "fulfillment": {
+          "conversationName": "api.ai"
+        },
+        "description": "Default Welcome Intent",
+        "intent": {
+          "name": "actions.intent.MAIN",
+          "trigger": {
+            "queryPatterns": []
+          }
+        },
+        "signInRequired": false
+      }
+    ],
+    "manifest": {
+      "displayName": "my test app",
+      "invocationName": "my test app"
+    },
+    "conversations": {
+      "api.ai": {
+        "name": "api.ai",
+        "inDialogIntents": [
+          {
+            "name": "171107aa-a030-430f-b929-4b565e62099a",
+            "trigger": {
+              "queryPatterns": [
+                "on",
+                "lights on",
+                "turn the light strip on"
+              ]
+            }
+          },
+          {
+            "name": "41457bb6-0b5e-4994-9b4a-0c09080e2a0e",
+            "trigger": {
+              "queryPatterns": [
+                "lights off",
+                "turn the lights off",
+                "off"
+              ]
+            }
+          },
+          {
+            "name": "94025eee-fc98-43c8-b3f7-2a06ef3ea3bf",
+            "parameters": [
+              {
+                "name": "color",
+                "type": "SchemaOrg_Color"
+              }
+            ],
+            "trigger": {
+              "queryPatterns": [
+                "$SchemaOrg_Color:color"
+              ]
+            }
+          },
+          {
+            "name": "RAW_TEXT",
+            "parameters": [
+              {
+                "name": "text",
+                "type": "SchemaOrg_Text"
+              }
+            ],
+            "trigger": {
+              "queryPatterns": [
+                "$SchemaOrg_Text:text"
+              ]
+            }
+          }
+        ],
+        "url": "https://api.api.ai/api/integrations/google?token\u003d3e19921ec55a4d7c94b47e6d5b82487e\u0026lang\u003den-US",
+        "fulfillmentApiVersion": 2
+      }
+    }
+  }
+}

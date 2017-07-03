@@ -49,7 +49,7 @@ IPAddress myDns(192,168,1, 1);
 EthernetServer server(23);
 boolean alreadyConnected = false; // whether or not the client was connected previously
 
-float rBalance = .8;
+float rBalance = .6;
 unsigned long lastMaintain;
 
 void setup() {     
